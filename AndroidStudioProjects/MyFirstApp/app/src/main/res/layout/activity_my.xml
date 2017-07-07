@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    tools:context="com.example.master.myfirstapp.MyActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/my_appbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarmain"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+        </android.support.design.widget.CoordinatorLayout>
+
+        <!-- <ImageView
+            android:id="@+id/headerDog"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lostdog1"
+            app:layout_collapseMode="parallax"/> -->
+        <ImageView
+            android:id="@+id/headerDog"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_collapseMode="parallax"/>
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/AddMissingPetCard"
+            android:layout_gravity="bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/headerDog"
+            card_view:cardCornerRadius="1dp"
+            card_view:cardBackgroundColor="#b10000"
+            >
+            <Button
+                android:id="@+id/button1card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/button1"
+                android:textColor="#ffebeb"
+                android:background="@null"
+                android:layout_margin="15dp"
+
+                android:onClick="ShowMap"
+
+                />
+         <!--   android:onClick="AddAMissingPet"-->
+
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ReportALostPetCard"
+                android:layout_gravity="bottom"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/AddMissingPetCard"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardBackgroundColor="#c40000"
+                >
+                <Button
+                    android:id="@+id/button2card"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="@string/button2"
+                    android:textColor="#ffebeb"
+                    android:background="@null"
+                    android:layout_margin="15dp"
+
+                    android:onClick="ReportALostPet"
+                    />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/HowDoesItWorkCard"
+                android:gravity="center"
+                android:layout_gravity="top"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/ReportALostPetCard"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardBackgroundColor="#d80000"
+                >
+                <Button
+                    android:id="@+id/button3card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffebeb"
+                    android:background="@null"
+                    android:layout_margin="15dp"
+                    android:text="@string/button3"
+
+                    android:onClick="HowDoesItWork"
+                    />
+            </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/SettingsCard"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/HowDoesItWorkCard"
+            card_view:cardCornerRadius="1dp"
+            card_view:cardBackgroundColor="#eb0000"
+            android:onClick="getNotified">
+            <Button
+                android:id="@+id/button4card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffebeb"
+                android:background="@null"
+                android:layout_margin="5dp"
+                android:text="@string/button4"
+
+                android:onClick="Settings"
+                />
+            <!-- no idea why the margin is like that -->
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ContactUsCard"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/SettingsCard"
+            card_view:cardCornerRadius="1dp"
+            card_view:cardBackgroundColor="#ff0000"
+            android:onClick="getNotified">
+            <Button
+                android:id="@+id/button5card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:textColor="#ffebeb"
+                android:background="@null"
+                android:layout_margin="15dp"
+                android:text="@string/button5"
+
+                android:onClick="ContactUs"
+                />
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_my" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_pets_black_24dp"
+        />
+
+
+
+</android.support.design.widget.CoordinatorLayout>

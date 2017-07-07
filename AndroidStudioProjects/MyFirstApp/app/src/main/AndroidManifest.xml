@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.master.myfirstapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/map_marker_paw"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name=".GeofenceTransitionsIntentService" />
+        <service android:name=".notify" />
+
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@style/splashScreenTheme">
+            <!--android:theme="@style/AppTheme.NoActionBar">-->
+
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.myfirstapp.MyActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.myfirstapp.MyActivity" />
+        </activity>
+        <activity
+            android:name=".AddPetActivity"
+            android:label="@string/title_activity_add_pet"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.myfirstapp.MyActivity" />
+        </activity>
+        <activity
+            android:name=".ReportLostPetActivity"
+            android:label="@string/title_activity_report_lost_pet"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.myfirstapp.MyActivity" />
+        </activity>
+        <activity
+            android:name=".HowDoesItWorkActivity"
+            android:label="@string/title_activity_how_does_it_work"
+            android:noHistory="true"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.myfirstapp.MyActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:noHistory="true"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".ContactUsActivity"
+            android:label="@string/title_activity_contact_us"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.myfirstapp.MyActivity" />
+        </activity>
+        <activity
+            android:name=".MapPaneActivity"
+            android:label="@string/title_activity_map_pane"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.myfirstapp.MyActivity" />
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapPanePetActivity"
+            android:noHistory="true"
+            android:label="@string/title_activity_map_pane_pet" />
+        <activity
+            android:name=".PetInformationActivity"
+            android:label="@string/title_activity_pet_information"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PrimaryCardView"
+            android:noHistory="true"
+            android:label="@string/title_activity_primary_card_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".locationActivity"
+            android:label="@string/title_activity_location"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LocationActivity2nd"
+            android:label="@string/title_activity_location_activity2nd"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NotificationSettingsActivity"
+            android:label="@string/title_activity_notification_settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MapService"
+            android:label="@string/title_activity_map_service"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+    </application>
+
+
+</manifest>

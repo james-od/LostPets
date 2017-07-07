@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">LostPets</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="see_lost_pets">See Lost Pets</string>
+    <string name="button1">Add a Missing Pet</string>
+    <string name="button2">Report a Lost Pet</string>
+    <string name="button3">How Does it Work?</string>
+    <string name="button4">Settings</string>
+    <string name="button5">Contact Us</string>
+    <string name="title_activity_add_pet">AddPetActivity</string>
+    <string name="title_activity_report_lost_pet">ReportLostPetActivity</string>
+    <string name="title_activity_how_does_it_work">HowDoesItWorkActivity</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_contact_us">ContactUsActivity</string>
+    <string name="title_activity_map_pane">MapPaneActivity</string>
+    <string name="title_activity_map_pane_pet">Map</string>
+    <string name="title_activity_all_lat_longs">AllLatLongsActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_pet_information">PetInformationActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_primary_card_view">PrimaryCardView</string>
+    <string name="title_activity_test">test</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_view_pets_images">viewPetsImages</string>
+    <string name="title_activity_location">locationActivity</string>
+    <string name="title_activity_location_activity2nd">LocationActivity2nd</string>
+    <string name="how_does_it_work">"Hello, thanks for downloading <b>LostPets!</b>\n\nOur goal is to <b>reunite</b> as many people with their missing pets as we can.\n\nBy using our app you\'ll receive <b>notifications</b> whenever someone nearby has lost their pet so you, and any other users nearby, can keep an eye out.\nYou can also view every lost pet in our database on our <b>map screen</b>.\n\n\n\n\n\n\nWe hope you like it!\n\n\n"</string>
+    <string name="title_activity_notification_settings">NotificationSettingsActivity</string>
+    <string name="title_activity_map_service">MapService</string>
+</resources>
