@@ -261,6 +261,11 @@ public class MapService extends FragmentActivity{
         return retArr;
 
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        gps = null;
+    }
 
 }
 

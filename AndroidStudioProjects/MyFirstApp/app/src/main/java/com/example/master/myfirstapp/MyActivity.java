@@ -35,9 +35,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.location.LocationListener;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -91,7 +90,7 @@ public class MyActivity extends AppCompatActivity {
 
         ImageView imageView = (ImageView) findViewById(R.id.headerDog);
 
-        Picasso.with(this).load(url2).into(imageView);
+        Glide.with(this).load(url2).into(imageView);
         //getNotified(viewPager);
 
     }

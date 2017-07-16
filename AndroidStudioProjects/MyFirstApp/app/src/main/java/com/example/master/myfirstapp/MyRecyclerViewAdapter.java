@@ -12,13 +12,10 @@ package com.example.master.myfirstapp;
     import android.view.LayoutInflater;
     import android.view.View;
     import android.view.ViewGroup;
-    import android.view.ViewTreeObserver;
     import android.widget.ImageView;
     import android.widget.TextView;
-    import android.widget.Toast;
 
-    import com.squareup.picasso.MemoryPolicy;
-    import com.squareup.picasso.NetworkPolicy;
+    import com.bumptech.glide.Glide;
     import com.squareup.picasso.Picasso;
 
     import java.util.ArrayList;
@@ -88,25 +85,8 @@ package com.example.master.myfirstapp;
             }
             if((mDataset.get(position).getGender() + mDataset.get(position).getBreed()).length()<1){
 
-                final Picasso.Builder builder = new Picasso.Builder(mContext);
-                builder.listener(new Picasso.Listener()
-                {
-                    @Override
-                    public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception)
-                    {
 
-                        Picasso
-                                .with(mContext)
-                                .load("http://www.james-odonnell.com/LostPets/images/markerLargeNIF.png")
-                                .resize(100, 50)
-                                .into(holder.iv);
-                        //Picasso.with(mContext).load("http://www.james-odonnell.com/LostPets/images/markerLargeNIF.png").networkPolicy(NetworkPolicy.NO_CACHE).into(holder.iv);
-                    }
-                });
-                builder.build()
-                        .load((mDataset.get(position).getImageAddress()).replaceAll("\\s+",""))
-                        .resize(100, 50)
-                        .into(holder.iv);
+                final Picasso.Builder builder = new Picasso.Builder(mContext);
 
             }else{
                 holder.tv2.setText(mDataset.get(position).getGender() + mDataset.get(position).getBreed());
@@ -118,20 +98,16 @@ package com.example.master.myfirstapp;
             */
 
             System.out.println("testprints 123333");
+            System.out.println("get item count "+getItemCount());
             System.out.println(mDataset.get(position).getImageAddress());
 
-
-
-            Picasso.Builder builder = new Picasso.Builder(mContext);
-            builder.listener(new Picasso.Listener()
-            {
-                @Override
-                public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception)
-                {
-                    Picasso.with(mContext).load("http://www.james-odonnell.com/LostPets/images/markerLargeNIF.png").skipMemoryCache().into(holder.iv);
-                }
-            });
-            builder.build().load((mDataset.get(position).getImageAddress()).replaceAll("\\s+","")).into(holder.iv);
+            String url = (mDataset.get(position).getImageAddress()).replaceAll("\\s+","");
+            Glide.with(mContext)
+                    .load(url)
+                    .placeholder(R.drawable.marker_large_nif)
+                    .centerCrop()
+                    .fitCenter()
+                    .into(holder.iv);
 
 
 

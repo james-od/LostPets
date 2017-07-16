@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.squareup.leakcanary.LeakCanary;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,6 +33,7 @@ public class PrimaryCardView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        LeakCanary.install(getApplication());
         //Toast.makeText(getApplicationContext(), "Create", Toast.LENGTH_SHORT).show();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primary_card_view);
@@ -81,5 +83,32 @@ public class PrimaryCardView extends AppCompatActivity {
             results.add(index, obj);
         }
         return results;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(mRecyclerView!=null)
+        {
+            System.out.println("Clearing mRecyclerView ");
+            mRecyclerView.destroyDrawingCache();
+            mRecyclerView=null;
+            System.out.println("Cleared mRecyclerView ");
+        }
+        if(StoreValsClass.GPStra4!=null){
+            System.out.println("Clearing GPStra4 " + StoreValsClass.GPStra4.size());
+            StoreValsClass.GPStra4.clear();
+            System.out.println("Cleared GPStra4 " + StoreValsClass.GPStra4.size());
+        }
+        if(mAdapter!=null){
+            System.out.println("Clearing mAdapter ");
+            mAdapter = null;
+            System.out.println("Cleared mAdapter ");
+        }
+        if(mLayoutManager!=null){
+            System.out.println("Clearing mLayoutManager ");
+            mLayoutManager = null;
+            System.out.println("Cleared mLayoutManager ");
+        }
     }
 }
