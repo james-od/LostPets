@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.master.LostPets">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/map_marker_paw"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="com.example.master.LostPets.LostPets"
+        android:theme="@style/AppTheme">
+        <service android:name="com.example.master.LostPets.GeofenceTransitionsIntentService" />
+        <service android:name="com.example.master.LostPets.notify" />
+        <service android:name="com.example.master.LostPets.DataService" />
+
+        <activity
+            android:name="com.example.master.LostPets.MyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/splashScreenTheme">
+
+            <!-- android:launchMode="singleInstance" -->
+            <!-- android:theme="@style/AppTheme.NoActionBar"> -->
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.LostPets.MyActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.master.LostPets.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName="com.example.master.LostPets.MyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.LostPets.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.example.master.LostPets.AddPetActivity"
+            android:label="@string/title_activity_add_pet"
+            android:parentActivityName="com.example.master.LostPets.MyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.LostPets.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.example.master.LostPets.ReportLostPetActivity"
+            android:label="@string/title_activity_report_lost_pet"
+            android:parentActivityName="com.example.master.LostPets.MyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.LostPets.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.example.master.LostPets.HowDoesItWorkActivity"
+            android:label="@string/title_activity_how_does_it_work"
+            android:parentActivityName="com.example.master.LostPets.MyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.LostPets.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.example.master.LostPets.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.master.LostPets.ContactUsActivity"
+            android:label="@string/title_activity_contact_us"
+            android:parentActivityName="com.example.master.LostPets.MyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.LostPets.MyActivity" />
+        </activity>
+        <activity
+            android:name=".MapPaneActivity"
+            android:label="@string/title_activity_map_pane"
+            android:parentActivityName="com.example.master.LostPets.MyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.master.LostPets.MyActivity" />
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCI3_vigd-wD4EVI5hCPRgoh4sjMXvpG3k" />
+
+        <activity
+            android:name="com.example.master.LostPets.MapPanePetActivity"
+            android:label="@string/title_activity_map_pane_pet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.master.LostPets.PetInformationActivity"
+            android:label="@string/title_activity_pet_information"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.master.LostPets.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.master.LostPets.PrimaryCardView"
+            android:label="@string/title_activity_primary_card_view"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.example.master.LostPets.locationActivity"
+            android:label="@string/title_activity_location"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.master.LostPets.LocationActivity2nd"
+            android:label="@string/title_activity_location_activity2nd"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.master.LostPets.NotificationSettingsActivity"
+            android:label="@string/title_activity_notification_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.master.LostPets.MapService"
+            android:label="@string/title_activity_map_service"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.master.LostPets.CardsFailedToLoadActvitiy"
+            android:label="@string/title_activity_cards_failed_to_load_actvitiy"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notificationPeriods">
+        <item>Never</item>
+        <item>Daily</item>
+        <item>Every 3 days</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+    <string-array name="notificationPeriodsValues">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>7</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="notificationRadii">
+        <item>1km</item>
+        <item>5km</item>
+        <item>10km</item>
+        <item>15km</item>
+        <item>50km</item>
+    </string-array>
+    <string-array name="notificationRadiiValues">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>50</item>
+    </string-array>
+
+</resources>

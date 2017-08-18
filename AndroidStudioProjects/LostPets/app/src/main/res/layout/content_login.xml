@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.master.LostPets.LoginActivity"
+    tools:showIn="@layout/activity_login">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_toRightOf="@+id/bLogin"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:text="Login"
+            android:textColor="#ffffff"
+            android:id="@+id/bLogin"
+            android:background="#80000000"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="27dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:text="Register"
+            android:textColor="#ffffff"
+            android:id="@+id/bRegister"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="27dp"
+            android:background="#80000000"
+            android:layout_toLeftOf="@+id/bLogin"
+            android:layout_toStartOf="@+id/bLogin"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="_________________________________"
+            android:layout_centerHorizontal="true"
+            android:textColor="#c40000"
+            android:id="@+id/textView"
+            android:layout_above="@+id/bRegister"
+            android:layout_marginBottom="70dp"
+            />0
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Notification Settings"
+        android:key="notification_category">
+
+        <ListPreference
+            android:key="notification_period"
+            android:summary="Set how frequently you are alerted of nearby lost pets"
+            android:entries="@array/notificationPeriods"
+            android:entryValues="@array/notificationPeriodsValues"
+            android:title="Notification Frequency"/>
+
+        <ListPreference
+            android:key="notification_radius"
+            android:summary="You'll receive a notification if a pet is closer than this set distance from you.\n\n"
+            android:entries="@array/notificationRadii"
+            android:entryValues="@array/notificationRadiiValues"
+            android:title="Notification Radius"
+            />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Send feedback"
+        android:summary="If you wish to send feedback tap below and select an email application, please be as detailed as you can!\n\n\n\n"
+        android:key="send_feedback">
+        <Preference
+            android:summary="If you wish to send feedback tap below and select an email application, please be as detailed as you can!"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

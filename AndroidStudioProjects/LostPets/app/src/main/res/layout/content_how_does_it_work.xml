@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.master.LostPets.HowDoesItWorkActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:text="\nWelcome"/>
+            <TextView
+                android:id="@+id/body"
+                android:layout_below="@+id/welcome"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_does_it_work" />
+            <TextView
+                android:id="@+id/faq"
+                android:layout_below="@+id/body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:text="\nFAQ"/>
+
+            <TextView
+                android:id="@+id/Title_map"
+                android:layout_below="@+id/faq"
+                android:padding="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_does_the_map_screen_work_q" />
+
+            <TextView
+                android:id="@+id/body_map"
+                android:layout_below="@+id/Title_map"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_does_the_map_screen_work_a" />
+            <TextView
+                android:id="@+id/Title_list"
+                android:layout_below="@+id/body_map"
+                android:padding="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_does_the_list_screen_work_q" />
+            <TextView
+                android:id="@+id/body_list"
+                android:layout_below="@+id/Title_list"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_does_the_list_screen_work_a" />
+            <TextView
+                android:id="@+id/how_do_i_submit_feedback_q"
+                android:layout_below="@+id/body_list"
+                android:padding="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_do_i_submit_feedback_q" />
+            <TextView
+                android:id="@+id/how_do_i_submit_feedback_a"
+                android:layout_below="@+id/how_do_i_submit_feedback_q"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_do_i_submit_feedback_a" />
+            <TextView
+                android:id="@+id/how_do_notifications_work_q"
+                android:layout_below="@+id/how_do_i_submit_feedback_a"
+                android:padding="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_do_notifications_work_q" />
+            <TextView
+                android:id="@+id/how_do_notifications_work_a"
+                android:layout_below="@+id/how_do_notifications_work_q"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_do_notifications_work_a" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
